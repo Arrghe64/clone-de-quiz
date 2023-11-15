@@ -1,0 +1,18 @@
+// ❌ DÉCONSEILLÉ
+app.innerHTML = `
+    <div>
+        <h1>
+            Salut
+        </h1>
+        <input />
+    </div>
+`;
+
+// 💚 CONSEILLÉ
+const div = document.createElement("div");
+const title = document.createElement("h1");
+const input = document.createElement("input");
+title.innerText = "Viviane 🦄";
+div.appendChild(title);
+div.appendChild(input);
+app.appendChild(div);
